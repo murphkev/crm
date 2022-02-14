@@ -1,0 +1,46 @@
+.customers {
+    list-style-type: none;
+    width: 15em;
+}
+
+.customers li {
+    display: flex;
+}
+
+.customers li:not(:first-of-type) {
+    margin-top: 6px;
+}
+
+.customers button {
+    height: 2em;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+}
+
+.badge {
+    background-color: #2F242C;
+    height: 2em;
+    line-height: 2em;
+    color: #E2DADB;
+    padding: 0 5px 0 5px;
+}
+
+.name {
+    align-self: center;
+    padding-left: 5px;
+}
+
+
+.selected .badge {
+    background-color: #EC7357;
+    color: #2F242C;
+}
+
+.selected {
+    background-color: #508AA8;
+    color: #E2DADB;
+}
