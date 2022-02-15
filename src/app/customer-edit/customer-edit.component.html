@@ -1,0 +1,19 @@
+<div *ngIf="customer">
+    <h2>Edit: {{customer.name}}</h2>
+    <div class="row">
+        <span class="label">Id</span>
+        <span class="field static">{{customer.id}}</span>
+    </div>
+    <div class="row">
+        <label class="label" for="customer-name">Name</label>
+        <input id="customer-name" class="field" [(ngModel)]="customer.name" placeholder="name">
+    </div>
+</div>
+<div class="row">
+    <button type="button" class="delete" title="delete customer" (click)="delete()">x</button>
+    <button type="button" class="back" (click)="goBack()">back</button>
+    <button type="button" class="save" (click)="save()">save</button>
+</div>
+
+
+

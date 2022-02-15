@@ -4,10 +4,10 @@ import { Customer } from '../customer';
 
 @Component({
   selector: 'app-customers',
-  templateUrl: './customers.component.html',
-  styleUrls: ['./customers.component.css']
+  templateUrl: './customer-list.component.html',
+  styleUrls: ['./customer-list.component.css']
 })
-export class CustomersComponent implements OnInit {
+export class CustomerListComponent implements OnInit {
 
   customers: Customer[] = [];
 
@@ -21,5 +21,10 @@ export class CustomersComponent implements OnInit {
     // subscribe passes the (eventual) result to the callback, which assigns the value to
     // the customers array.
     this.customerService.getCustomers().subscribe(customers => this.customers = customers);
+  }
+
+  delete(customer: Customer): void {
+    this.customers = this.customers.filter(c => c !== customer);
+    this.customerService.deleteCustomer(customer.id).subscribe();
   }
 }

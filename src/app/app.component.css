@@ -1,0 +1,18 @@
+nav {
+    font-size: 2em;
+}
+
+a:link, a:active, a:visited {
+    color: #2F242C;
+    background-color: #E2DADB;
+    text-decoration: none;
+}
+
+a:not(:first-of-type) {
+    margin-left: 20px;
+}
+
+a:hover {
+    color: #2F242C;
+    background-color: #EC7357;
+}

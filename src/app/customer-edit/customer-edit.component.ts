@@ -5,11 +5,11 @@ import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-customer-detail',
-  templateUrl: './customer-detail.component.html',
-  styleUrls: ['./customer-detail.component.css']
+  selector: 'app-customer-edit',
+  templateUrl: './customer-edit.component.html',
+  styleUrls: ['./customer-edit.component.css']
 })
-export class CustomerDetailComponent implements OnInit {
+export class CustomerEditComponent implements OnInit {
 
   @Input() customer?: Customer;
 
@@ -35,5 +35,12 @@ export class CustomerDetailComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  delete(): void {
+    if(this.customer) {
+      this.customerService.deleteCustomer(this.customer.id).subscribe();
+      this.goBack();
+    }
   }
 }

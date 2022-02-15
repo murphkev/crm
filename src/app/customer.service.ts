@@ -25,7 +25,16 @@ export class CustomerService {
     return this.http.get<Customer>(url);
   }
 
+  addCustomer(customer: Customer): Observable<Customer> {
+    return this.http.post<Customer>(this.customerUrl, customer, this.httpOptions);
+  }
+
   updateCustomer(customer: Customer): Observable<any> {
     return this.http.put(this.customerUrl, customer, this.httpOptions);
+  }
+
+  deleteCustomer(id: number): Observable<Customer> {
+    const url = `${this.customerUrl}/${id}`;
+    return this.http.delete<Customer>(url, this.httpOptions);
   }
 }

@@ -1,8 +1,9 @@
 <h2>Customers</h2>
 <ul class="customers">
   <li *ngFor="let customer of customers">
-    <a routerLink="/detail/{{customer.id}}">
+    <a routerLink="/customer/edit/{{customer.id}}">
       <span class="badge">{{customer.id}}</span><span class="name">{{customer.name}}</span>
     </a>
+    <button type="button" class="delete" title="delete customer" (click)="delete(customer)">x</button>
   </li>
 </ul>
