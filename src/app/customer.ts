@@ -1,5 +1,4 @@
-import { id } from "./id";
-
-export interface Customer extends id {
+export interface Customer {
+    id: number;
     name: string;
 }

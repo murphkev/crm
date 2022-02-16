@@ -3,7 +3,6 @@ import { CustomerService } from '../customer.service';
 import { Customer } from '../customer';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-customer-add',
@@ -18,8 +17,7 @@ export class CustomerAddComponent implements OnInit {
   
   constructor(
     private customerService: CustomerService,
-    private location: Location, 
-    private activatedRoute: ActivatedRoute) { 
+    private location: Location) { 
   }
 
   ngOnInit(): void {

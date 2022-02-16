@@ -12,15 +12,13 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { CustomerViewComponent } from './customer-view/customer-view.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CustomerAddComponent } from './customer-add/customer-add.component';
-import { ConfirmDeleteComponent } from './confirm-delete/confirm-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerListComponent,
     CustomerViewComponent,
-    CustomerAddComponent,
-    ConfirmDeleteComponent
+    CustomerAddComponent
   ],
   imports: [
     BrowserModule,
