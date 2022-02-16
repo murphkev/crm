@@ -6,6 +6,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { CustomerModule } from './customer/customer.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { CustomerModule } from './customer/customer.module';
   ],
   imports: [
     CustomerModule,
+    SharedModule,
     BrowserModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(

@@ -8,6 +8,7 @@ import { CustomerAddComponent } from './customer-add/customer-add.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule

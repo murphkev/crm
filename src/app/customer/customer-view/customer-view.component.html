@@ -10,12 +10,11 @@
     </div>
 </div>
 <div class="row">
-    <button type="button" class="delete" title="delete customer" (click)="delete()">x</button>
-    <button *ngIf="!editing" type="button" class="back" (click)="goBack()">back</button>
-    <button *ngIf="!editing" type="button" class="edit" (click)="edit()">edit</button>
-
-    <button *ngIf="editing" type="button" class="cancel" (click)="cancel()">cancel</button>
-    <button *ngIf="editing" type="button" class="save" (click)="save()">save</button>
+    <app-button class="danger" type="button" label="x" (onClick)="delete()"></app-button>
+    <app-button *ngIf="!editing" class="cancel" type="button" label="back" (onClick)="goBack()"></app-button>
+    <app-button *ngIf="!editing" class="primary" type="button" label="edit" (onClick)="edit()"></app-button>
+    <app-button *ngIf="editing" class="cancel" type="button" label="cancel" (onClick)="cancel()"></app-button>
+    <app-button *ngIf="editing" class="primary" type="button" label="save" (onClick)="save()"></app-button>
 </div>
 
 

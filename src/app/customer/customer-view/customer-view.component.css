@@ -1,23 +1,5 @@
-button {
-    border: none;
-    height: 2em;
-    padding: 0 10px 0 10px;
-    cursor:pointer;
-}
-
-.delete {
-    margin-right: 5px;
-    background-color: #EC7357;
-    color: #2F242C;
-}
-
-.back, .cancel {
-    margin-right: 5px;
-    background-color:#E2DADB
-}
-
-.save, .edit {
-    background-color: #F2BB05;
+app-button:not(:first-of-type) {
+    margin-left: 5px;
 }
 
 .row {

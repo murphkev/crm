@@ -1,0 +1,21 @@
+button {
+    border: none;
+    height: 2em;
+    padding: 0 10px 0 10px;
+    cursor:pointer;
+}
+
+.danger {
+    background-color: #EC7357;
+    color: #2F242C;
+}
+
+.cancel {
+    background-color:#E2DADB;
+    color: #2F242C;
+}
+
+.primary {
+    background-color: #F2BB05;
+    color: #2F242C;
+}
