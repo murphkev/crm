@@ -6,17 +6,20 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-customer-edit',
-  templateUrl: './customer-edit.component.html',
-  styleUrls: ['./customer-edit.component.css']
+  templateUrl: './customer-view.component.html',
+  styleUrls: ['./customer-view.component.css']
 })
-export class CustomerEditComponent implements OnInit {
+export class CustomerViewComponent implements OnInit {
 
   @Input() customer?: Customer;
+  editing: boolean;
 
   constructor(
     private customerService: CustomerService,
     private location: Location, 
-    private activatedRoute: ActivatedRoute) { }
+    private activatedRoute: ActivatedRoute) { 
+      this.editing = false;
+    }
 
   ngOnInit(): void {
     this.getCustomer();
@@ -27,9 +30,18 @@ export class CustomerEditComponent implements OnInit {
     this.customerService.getCustomer(id).subscribe(customer => this.customer = customer);
   }
 
+  edit(): void {
+    this.editing = true;
+  }
+
+  cancel(): void {
+    this.editing = false;
+    this.getCustomer();
+  }
+
   save(): void {
     if(this.customer) {
-      this.customerService.updateCustomer(this.customer).subscribe(() => this.goBack());
+      this.customerService.updateCustomer(this.customer).subscribe(() => this.editing = false );
     }
   }
 

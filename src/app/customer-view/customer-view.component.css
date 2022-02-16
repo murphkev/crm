@@ -11,12 +11,12 @@ button {
     color: #2F242C;
 }
 
-.back {
+.back, .cancel {
     margin-right: 5px;
     background-color:#E2DADB
 }
 
-.save {
+.save, .edit {
     background-color: #F2BB05;
 }
 

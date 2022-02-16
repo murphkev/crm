@@ -9,16 +9,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
-import { CustomerEditComponent } from './customer-edit/customer-edit.component';
+import { CustomerViewComponent } from './customer-view/customer-view.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CustomerAddComponent } from './customer-add/customer-add.component';
+import { ConfirmDeleteComponent } from './confirm-delete/confirm-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerListComponent,
-    CustomerEditComponent,
-    CustomerAddComponent
+    CustomerViewComponent,
+    CustomerAddComponent,
+    ConfirmDeleteComponent
   ],
   imports: [
     BrowserModule,
