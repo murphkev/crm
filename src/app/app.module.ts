@@ -1,29 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { CustomerListComponent } from './customer-list/customer-list.component';
-
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
-import { CustomerViewComponent } from './customer-view/customer-view.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CustomerAddComponent } from './customer-add/customer-add.component';
+import { CustomerModule } from './customer/customer.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CustomerListComponent,
-    CustomerViewComponent,
-    CustomerAddComponent
+    AppComponent
   ],
   imports: [
+    CustomerModule,
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
