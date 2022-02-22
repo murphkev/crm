@@ -1,1 +1,1 @@
-<button type="{{type}}" class="{{class}}" (click)="onClickButton($event)" >{{label}}</button>
+<button [type]="type" [class]="class" (click)="click($event)" [disabled]="isDisabled" [title]="title">{{label}}</button>

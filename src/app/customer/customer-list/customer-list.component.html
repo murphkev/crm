@@ -4,6 +4,6 @@
     <a routerLink="/customer/edit/{{customer.id}}">
       <span class="badge">{{customer.id}}</span><span class="name">{{customer.name}}</span>
     </a>
-    <button type="button" class="delete" title="delete customer" (click)="delete(customer)">x</button>
+    <app-button type="button" class="danger" (onClick)="delete(customer)" label="x" title="delete customer"></app-button>
   </li>
 </ul>

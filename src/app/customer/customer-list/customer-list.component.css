@@ -36,10 +36,6 @@ li a {
     padding: 0 5px 0 5px;
 }
 
-.delete {
-    background-color: #EC7357;
-    color: #2F242C;
-    border: none;
-    width: 2em;
-    cursor:pointer;
+app-button:not(:first-of-type) {
+    margin-left: 5px;
 }

@@ -1,8 +1,14 @@
 button {
     border: none;
-    height: 2em;
+    height: 100%;
     padding: 0 10px 0 10px;
     cursor:pointer;
+}
+
+button:disabled {
+    background-color: #E2DADB;
+    color: #ffffff;
+    pointer-events: none;
 }
 
 .danger {

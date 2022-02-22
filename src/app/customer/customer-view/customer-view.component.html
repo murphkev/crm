@@ -14,7 +14,7 @@
     <app-button *ngIf="!editing" class="cancel" type="button" label="back" (onClick)="goBack()"></app-button>
     <app-button *ngIf="!editing" class="primary" type="button" label="edit" (onClick)="edit()"></app-button>
     <app-button *ngIf="editing" class="cancel" type="button" label="cancel" (onClick)="cancel()"></app-button>
-    <app-button *ngIf="editing" class="primary" type="button" label="save" (onClick)="save()"></app-button>
+    <app-button *ngIf="editing" class="primary" type="button" label="save" [isDisabled]="(customer === undefined || customer.name === '')" (onClick)="save()"></app-button>
 </div>
 
 
