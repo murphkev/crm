@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Customer } from './customer/customer';
+import { Product } from './product/product';
 
 @Injectable({
   providedIn: 'root'
@@ -19,13 +20,24 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 108, name: 'Leichhardt Espresso' },
       { id: 109, name: 'Cooh' },
       { id: 110, name: 'Cuppa Flower' }
-    ]
-    return { customers };
+    ];
+    const products = [
+      { id: 101, name: 'Cappuccino' },
+      { id: 102, name: 'Long Black' },
+      { id: 103, name: 'Short Black' },
+      { id: 104, name: 'Flat White' },
+      { id: 105, name: 'Latte' },
+      { id: 106, name: 'Espresso' },
+      { id: 107, name: 'Cold Press' },
+      { id: 108, name: 'Mocha' },
+      { id: 109, name: 'Dirty Chai' },
+      { id: 110, name: 'Macchiato' }
+    ];
+    return { customers, products };
   }
 
   // return the max id plus one, or the initial number
-  genId(customers: Customer[]): number {
-    return customers.length > 0 ? Math.max(...customers.map(customer => customer.id)) + 1 : 101;
-
+  genId<T extends Customer | Product>(table: T[]): number {
+    return table.length > 0 ? Math.max(...table.map(t => t.id)) + 1 : 101;
   }
 }

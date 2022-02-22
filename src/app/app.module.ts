@@ -7,6 +7,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { CustomerModule } from './customer/customer.module';
 import { SharedModule } from './shared/shared.module';
+import { ProductModule } from './product/product.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     CustomerModule,
+    ProductModule,
     SharedModule,
     BrowserModule,
     HttpClientModule,

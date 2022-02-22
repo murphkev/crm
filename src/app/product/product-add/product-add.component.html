@@ -1,0 +1,11 @@
+<h2>Add New Product</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <label class="label" for="name">Name: </label>
+        <input class="field" id="name" type="text" formControlName="name">
+    </div>
+    <div class="row">
+        <app-button type="button" class="cancel" (onClick)="goBack()" label="back"></app-button>
+        <app-button type="submit" class="primary" [isDisabled]="form.invalid" label="submit"></app-button>
+    </div>
+</form>
