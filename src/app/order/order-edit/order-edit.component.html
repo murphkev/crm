@@ -1,0 +1,24 @@
+<div *ngIf="order">
+    <h2>Order #{{order.id}} | {{order.customer.name}}</h2>
+    <form [formGroup]="form" (ngSubmit)="save()">
+        <h3>Customer Details</h3>
+        <div class="row">
+            <label for="customer" class="label">{{order.customer.id}}</label>         
+            <select id="customer" formControlName="customer" class="field" [disabled]="!editing">
+                <option *ngFor="let customer of customers" [ngValue]="customer.id">{{customer.name}}</option>
+            </select>
+        </div>
+        <h3>Order Lines</h3>
+        
+    </form>
+</div>
+<div class="row">
+    <app-button class="danger" type="button" label="x" (onClick)="delete()"></app-button>
+    <app-button *ngIf="!editing" class="cancel" type="button" label="back" (onClick)="goBack()"></app-button>
+    <app-button *ngIf="!editing" class="primary" type="button" label="edit" (onClick)="edit()"></app-button>
+    <app-button *ngIf="editing" class="cancel" type="button" label="cancel" (onClick)="cancel()"></app-button>
+    <app-button *ngIf="editing" class="primary" type="button" label="save" [isDisabled]="(order === undefined || order.customer.name === '')" (onClick)="save()"></app-button>
+</div>
+
+
+

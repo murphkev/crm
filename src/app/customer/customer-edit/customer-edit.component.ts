@@ -6,10 +6,10 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-customer-edit',
-  templateUrl: './customer-view.component.html',
-  styleUrls: ['./customer-view.component.css']
+  templateUrl: './customer-edit.component.html',
+  styleUrls: ['./customer-edit.component.css']
 })
-export class CustomerViewComponent implements OnInit {
+export class CustomerEditComponent implements OnInit {
 
   @Input() customer?: Customer;
   editing: boolean;

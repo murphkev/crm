@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Customer } from './customer';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -36,5 +36,24 @@ export class CustomerService {
   deleteCustomer(id: number): Observable<Customer> {
     const url = `${this.customerUrl}/${id}`;
     return this.http.delete<Customer>(url, this.httpOptions);
+  }
+
+  searchCustomers(id: string, name: string): Observable<Customer[]> {
+    if(!id.trim() && !name.trim()) {
+      return this.getCustomers();
+    }
+    else if(!id.trim()) {
+      console.log(`${this.customerUrl}/?name=${name}`);
+      return this.http.get<Customer[]>(`${this.customerUrl}/?name=${name}`);
+      
+    }
+    else if(!name.trim()) {
+      console.log(`${this.customerUrl}/?id=${id}`);
+      return this.http.get<Customer[]>(`${this.customerUrl}/?id=${id}`);
+    }
+    else {
+      console.log(`${this.customerUrl}/?name=${name}&id=${id}`);
+      return this.http.get<Customer[]>(`${this.customerUrl}/?name=${name}&id=${id}`);
+    }
   }
 }

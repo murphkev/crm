@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CustomerListComponent } from './customer-list/customer-list.component';
-import { CustomerViewComponent } from './customer-view/customer-view.component';
+import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 import { CustomerAddComponent } from './customer-add/customer-add.component';
 
 import { RouterModule } from '@angular/router';
@@ -13,7 +13,7 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [
     CustomerListComponent,
-    CustomerViewComponent,
+    CustomerEditComponent,
     CustomerAddComponent
   ],
   imports: [

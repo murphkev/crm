@@ -5,11 +5,11 @@ import { Product } from '../product';
 import { ProductService } from '../product.service';
 
 @Component({
-  selector: 'app-product-view',
-  templateUrl: './product-view.component.html',
-  styleUrls: ['./product-view.component.css']
+  selector: 'app-product-edit',
+  templateUrl: './product-edit.component.html',
+  styleUrls: ['./product-edit.component.css']
 })
-export class ProductViewComponent implements OnInit {
+export class ProductEditComponent implements OnInit {
 
   @Input() product?: Product;
   editing: boolean;

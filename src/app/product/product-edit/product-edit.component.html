@@ -1,12 +1,12 @@
-<div *ngIf="customer">
-    <h2>    {{customer.name}}</h2>
+<div *ngIf="product">
+    <h2>{{product.name}}</h2>
     <div class="row">
         <span class="label">Id</span>
-        <span class="field static">{{customer.id}}</span>
+        <span class="field static">{{product.id}}</span>
     </div>
     <div class="row">
-        <label class="label" for="customer-name">Name</label>
-        <input id="customer-name" class="field" [disabled]="!editing" [(ngModel)]="customer.name" placeholder="name">
+        <label class="label" for="product-name">Name</label>
+        <input id="product-name" class="field" [disabled]="!editing" [(ngModel)]="product.name" placeholder="name">
     </div>
 </div>
 <div class="row">
@@ -14,8 +14,5 @@
     <app-button *ngIf="!editing" class="cancel" type="button" label="back" (onClick)="goBack()"></app-button>
     <app-button *ngIf="!editing" class="primary" type="button" label="edit" (onClick)="edit()"></app-button>
     <app-button *ngIf="editing" class="cancel" type="button" label="cancel" (onClick)="cancel()"></app-button>
-    <app-button *ngIf="editing" class="primary" type="button" label="save" [isDisabled]="(customer === undefined || customer.name === '')" (onClick)="save()"></app-button>
+    <app-button *ngIf="editing" class="primary" type="button" label="save" [isDisabled]="(product === undefined || product.name === '')" (onClick)="save()"></app-button>
 </div>
-
-
-

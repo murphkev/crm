@@ -1,0 +1,33 @@
+app-button:not(:first-of-type) {
+    margin-left: 5px;
+}
+
+.row {
+    width: 20em;
+    display: flex;
+    height: 2em;
+    justify-content: flex-end;
+}
+
+.row:not(:first-of-type) {
+    margin-top: 5px;
+}
+
+.label {
+    background-color: #2F242C;
+    color: #E2DADB;
+    line-height: 2em;
+    padding: 0 5px 0 5px;
+    margin-right: 5px;
+    width: 3em;
+}
+
+.field {
+    flex-grow: 1;
+    line-height: 2em;
+    padding: 0 5px 0 5px;
+}
+
+.static {
+    background-color: #E2DADB;
+}

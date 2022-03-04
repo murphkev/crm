@@ -1,7 +1,7 @@
 <h2>Products</h2>
 <ul class="products">
   <li *ngFor="let product of products">
-    <a routerLink="/product/view/{{product.id}}">
+    <a routerLink="/product/edit/{{product.id}}">
       <span class="badge">{{product.id}}</span><span class="name">{{product.name}}</span>
     </a>
     <app-button type="button" class="danger" (onClick)="delete(product)" label="x" title="delete product"></app-button>

@@ -1,6 +1,6 @@
-<h1>{{title}}</h1>
 <nav>
-    <a routerLink="/customer/list">Customers</a>
-    <a routerLink="/product/list">Products</a>
+    <a routerLink="/customer/list" routerLinkActive="nav-selected" [routerLinkActiveOptions]="{exact: true}">Customers</a>
+    <a routerLink="/product/list" routerLinkActive="nav-selected" [routerLinkActiveOptions]="{exact: true}">Products</a>
+    <a routerLink="/order/list" routerLinkActive="nav-selected" [routerLinkActiveOptions]="{exact: true}">Orders</a>
 </nav>
 <router-outlet></router-outlet>
